@@ -100,3 +100,171 @@ a {
   margin: 0;
   color: var(--gris);
 }
+
+
+/* style du header et du footer */
+
+/* ---------- Structure de page ---------- */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ---------- Header ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--blanc);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header-barre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 0.75rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo-b {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--vert);
+  color: var(--blanc);
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+
+À COPIER dans ton projet .logo-texte {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.logo-texte small {
+  font-weight: 400;
+  color: var(--gris);
+  font-size: 0.75rem;
+}
+
+.burger {
+  background: none;
+  border: 2px solid var(--vert);
+  color: var(--vert);
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Mobile : menu caché, déroulant sous l'en-tête */
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  background: var(--blanc);
+  padding: 0.5rem 1rem 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.menu-ouvert {
+  display: flex;
+}
+
+.menu a {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--vert-fonce);
+  color: #dfe9e3;
+  padding-top: 2rem;
+}
+
+.footer-contenu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-contenu p {
+  margin: 0.3rem 0 0;
+  color: #b9cbc0;
+}
+
+.footer-liens {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.90rem;
+}
+
+.footer-liens a:hover {
+  color: var(--or);
+}
+
+.footer-credit {
+  text-align: right;
+  margin: 2rem 0 0;
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.85rem;
+  color: var(--or);
+}
+
+/* ---------- Écrans larges (ordinateur) ---------- */
+@media (min-width: 700px) {
+  .footer-contenu {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-liens {
+    text-align: right;
+  }
+}
+
+@media (min-width: 960px) {
+  .burger {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    gap: 1.4rem;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .menu a {
+    padding: 0;
+    border: none;
+  }
+
+  .menu a:hover {
+    color: var(--vert);
+  }
+}
