@@ -268,3 +268,8 @@ main {
     color: var(--vert);
   }
 }
+
+/* PageVide et Home */
+ .page-vide { padding-block: 4rem; }
+
+ /* bouton style */

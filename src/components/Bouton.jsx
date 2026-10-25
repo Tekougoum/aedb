@@ -1,8 +1,9 @@
-function Bouton({ children, lien = '#', variante = 'plein' }) {
+import { Link } from 'react-router-dom'
+function Bouton({ children, lien = '/', variante = 'plein' }) {
   return (
-    <a href={lien} className={`btn btn-${variante}`}>
+    <Link to={lien} className={`btn btn-${variante}`}>
       {children}
-    </a>
+    </Link>
   )
 }
 export default Bouton
