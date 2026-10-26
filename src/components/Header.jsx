@@ -18,7 +18,7 @@ function Header() {
           <span className="logo-b">B</span>
           <span className="logo-texte">
             <sub><strong>Étudiants Baleveng</strong></sub><br />
-            <small>Association de Dschang</small>
+            <sup><small>Association de Dschang</small></sup>
           </span>
         </Link>
         <button
